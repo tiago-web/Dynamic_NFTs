@@ -25,7 +25,7 @@ export const useDigitalContract = (): UseDigitalContractProps => {
         value: mintPrice,
       });
 
-      await tx?.wait(1);
+      await tx?.wait();
       return watchNFTMinting();
     },
     [watchNFTMinting, digitalNftContract]
@@ -37,7 +37,7 @@ export const useDigitalContract = (): UseDigitalContractProps => {
         value: evolvePrice,
       });
 
-      await tx?.wait(1);
+      await tx?.wait();
       await watchEvolution(tokenId);
     },
     [watchEvolution, digitalNftContract]

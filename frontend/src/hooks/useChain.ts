@@ -8,7 +8,7 @@ interface UseChainProps {
   watchNFTMinting: () => Promise<BigNumber | undefined>;
   watchEvolution: (tokenId: string) => Promise<void>;
 }
-const TOLERANCE_BLOCK_NUMBER = 10;
+const TOLERANCE_BLOCK_NUMBER = 5;
 
 export const useChain = (): UseChainProps => {
   const { digitalNftContract, accountAddress } = useAccount();
