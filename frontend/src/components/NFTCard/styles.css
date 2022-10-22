@@ -1,0 +1,75 @@
+.nft-card {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+
+  border-radius: 15px;
+
+  -webkit-box-shadow: 6px 6px 24px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 6px 6px 24px 3px rgba(0, 0, 0, 0.6);
+}
+.nft-card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.nft-card-info {
+  padding: 0.6rem;
+  width: 100%;
+}
+
+.nft-card-info button {
+  width: 100%;
+}
+
+.nft-card .nft-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nft-card .nft-description {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.nft-card .nft-owner {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  word-break: break-all;
+}
+
+.nft-card .nft-owner strong {
+  font-weight: 600;
+}
+
+.alert-nft-on-mrk {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ff9811;
+}
+
+.img-hover-zoom {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+
+  height: 280px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  box-shadow: 3px 3px 24px 2px rgb(0 0 0 / 30%);
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform 0.8s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.nft-card:hover img {
+  transform: scale(1.2);
+}

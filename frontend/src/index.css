@@ -1,0 +1,119 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  background-color: #fafafa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --dark-green: #0081cc;
+  --green: #009036;
+  --lighter-green: #1a9587;
+  --light-green: #0e9240;
+  --red: #e20026;
+  --blue: #3aaadc;
+  --yellow: #ff9811;
+  --dark: #333333;
+  --gray: #98a2a7;
+  --white-gray: #ffffff;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 34%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+label,
+button,
+a {
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  background-color: #0081cc;
+  cursor: pointer;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #005a8f;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+.mynfts-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  font-size: 2.3rem;
+}
+
+.nfts-container {
+  width: 100%;
+  grid-gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.no-nfts-container {
+  width: 35rem;
+  margin: 0 auto;
+}
+
+.no-nfts-container p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.no-nfts-container button {
+  margin: 0 auto;
+}

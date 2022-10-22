@@ -1,0 +1,29 @@
+.connect-wallet {
+  width: 10.5rem;
+  color: #0081cc;
+  background: transparent;
+  border: 1px solid #0081cc;
+}
+
+.connect-wallet:hover {
+  color: #fff;
+  border: 1px solid #0081cc;
+  background: #0081cc;
+}
+
+.disconnect-wallet-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.disconnect-wallet-container p {
+  text-align: left;
+  width: 100%;
+
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.disconnect-wallet-container button {
+  margin: 0 auto;
+}
