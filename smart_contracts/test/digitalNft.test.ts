@@ -171,6 +171,19 @@ describe("Digital NFT Unit Tests", () => {
                 .withArgs("1");
         });
 
+        it("should fail if the invalid owner tries to evolve", async () => {
+            const tx = await digitalNft.mintNft(DogType.BABY_PUG, {
+                value: mintPrice,
+            });
+            await tx.wait(1);
+
+            await expect(
+                digitalNft.connect(alice).evolve("1", {
+                    value: evolvePrice,
+                })
+            ).to.be.revertedWith("DigitalNft__InvalidOwner()");
+        });
+
         it("should fail if the eth sent is not enough", async () => {
             await expect(
                 digitalNft.evolve("0", {

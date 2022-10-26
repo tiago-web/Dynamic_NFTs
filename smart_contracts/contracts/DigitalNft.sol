@@ -2,7 +2,6 @@
 pragma solidity ^0.8.8;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @notice The contract has already being initialized.
@@ -24,13 +23,17 @@ error DigitalNft__InvalidTokenId();
  * @notice The specified token has already being evolved.
  */
 error DigitalNft__NftAlreadyEvolved();
+/**
+ * @notice The token owner does not correspond to the sender.
+ */
+error DigitalNft__InvalidOwner();
 
 /**
  * @title Digital Nft contract
  * @author <contact@tiagosoriano.dev>
  * @notice Enables accounts to mint and evolve ERC-721 dog tokens
  */
-contract DigitalNft is ERC721URIStorage, Ownable {
+contract DigitalNft is ERC721URIStorage {
     enum DogType {
         BABY_PUG,
         BABY_SHIBA_INU,
@@ -104,6 +107,9 @@ contract DigitalNft is ERC721URIStorage, Ownable {
     function evolve(uint256 tokenId) external payable {
         if (msg.value < EVOLVE_PRICE) revert DigitalNft__InsufficientETHSent();
         if (tokenId >= _tokenCounter) revert DigitalNft__InvalidTokenId();
+
+        address tokenOwner = ownerOf(tokenId);
+        if (tokenOwner != _msgSender()) revert DigitalNft__InvalidOwner();
 
         Dog storage dog = _dogs[tokenId];
 
